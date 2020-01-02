@@ -277,7 +277,7 @@ namespace sub_routine_dstar_lite {
 		
 		// let's try to clean the open_list
 		// open_list.clear();
-		// while, no good...
+		// well, no good...
 
 		return res_flag;
 	} // end ComputeShortestPath()

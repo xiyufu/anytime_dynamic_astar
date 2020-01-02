@@ -21,6 +21,12 @@ namespace sub_routine_dstar_lite {
 namespace astar_planner {
 	void AStarPlanner::UnitTest() {
 		bool res_flag = MakePlan();
+		if (res_flag) {
+			std::cout << "Reached the goal successfully" << std::endl;
+		}
+		else {
+			std::cout << "Can't find a valid route" << std::endl;
+		}
 	}
 }
 
@@ -55,7 +61,12 @@ int main(int argc, wchar_t** argv) {
 	// 	map_info[i][15] = 1;
 	// }
 	//map_info[1][1] = 0;
-	sub_routine_dstar_lite::DStarLite dsl(start_node, goal_node, &map_info);
-	dsl.UnitTest();
+
+
+	// sub_routine_dstar_lite::DStarLite dsl(start_node, goal_node, &map_info);
+	// dsl.UnitTest();
+
+	astar_planner::AStarPlanner asp(start_node, goal_node, &map_info);
+	asp.UnitTest();
 	
 }

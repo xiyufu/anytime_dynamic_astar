@@ -98,6 +98,7 @@ namespace astar_planner {
                     double delta_g = EdgeCost(current_node, pre_node, i);
                     if (delta_g + current_node->g_cost < pre_node->g_cost) {
                         pre_node->g_cost = delta_g + current_node->g_cost;
+                        pre_node->predecessor = current_node;
                     }
                     if (pre_node->node_status != OPEN) {
                         UpdateKey(pre_node);
